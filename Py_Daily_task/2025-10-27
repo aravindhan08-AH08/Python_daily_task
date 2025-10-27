@@ -45,4 +45,4 @@ def greeting(name:str) -> str:
     return f"Hello {name}"
 print(add(10, 5))
 print(greeting("Sachin"))
-print(greeting(90))
+print(greeting("Aravindhan"))
