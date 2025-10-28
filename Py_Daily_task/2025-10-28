@@ -1,0 +1,8 @@
+# Question 1
+word = "Python"
+rev = ""
+for i in range(len(word)-1,-1,-1):
+    rev = rev + word[i]
+print("Reversed:", rev)
+
+# Question 2
