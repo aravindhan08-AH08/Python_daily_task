@@ -52,3 +52,48 @@ acc2.withdraw(800)  # insufficient balance warning
 # Final balances
 acc1.show_balance()
 acc2.show_balance()
+
+
+# Question 2
+class LibraryBook:
+    def __init__(self, title, author, available_copies):
+        self.title = title
+        self.author = author
+        self.available_copies = available_copies
+
+    def borrow_book(self):
+        if self.available_copies > 0:
+            self.available_copies -= 1
+            print(f"Book borrowed: {self.title}")
+            print(f"Available copies: {self.available_copies}")
+        else:
+            print("Book not available!")
+
+    def return_book(self):
+        self.available_copies += 1
+        print(f"Book returned: {self.title}")
+        print(f"Available copies: {self.available_copies}")
+
+    def show_status(self):
+        print(f"Title: {self.title} | Author: {self.author} | Available copies: {self.available_copies}")
+
+
+
+book1 = LibraryBook("Harry Potter", "J.K. Rowling", 2)
+book2 = LibraryBook("Rich Dad Poor Dad", "Robert Kiyosaki", 1)
+
+
+book1.show_status()
+book2.show_status()
+
+
+book1.borrow_book()
+book1.borrow_book()
+book1.borrow_book()  
+
+
+book1.return_book()
+
+
+book1.show_status()
+book2.show_status()
