@@ -1,0 +1,11 @@
+# Class Assignment sir sonnaru max salary yaru vangunangalo avanga name print pannanum
+name = ["Alice", "John", "Farhana", "Ruben"]
+salary = [50000, 20000, 50000, 25000]
+max = salary[0]
+
+for i in range (len(salary)):
+    if salary[i] > max:
+        max = salary[i]
+for i in range (len(salary)):
+    if salary[i] == max:
+        print(name[i])
