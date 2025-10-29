@@ -9,3 +9,46 @@ for i in range (len(salary)):
 for i in range (len(salary)):
     if salary[i] == max:
         print(name[i])
+
+
+
+# Question 1
+class BankAccount:
+    def __init__(self, name, balance=0):
+        self.name = name
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"{self.name} deposited {amount}. New balance: {self.balance}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print(f"Insufficient balance! {self.name} has only {self.balance}.")
+        else:
+            self.balance -= amount
+            print(f"{self.name} withdrew {amount}. New balance: {self.balance}")
+
+    def show_balance(self):
+        print(f"Account Holder: {self.name} | Balance: {self.balance}")
+
+
+# Create two accounts
+acc1 = BankAccount("Aravindhan", 1000)
+acc2 = BankAccount("Kumar", 500)
+
+# Show initial balances
+acc1.show_balance()
+acc2.show_balance()
+
+# Deposit money
+acc1.deposit(500)
+acc2.deposit(200)
+
+# Withdraw money
+acc1.withdraw(300)
+acc2.withdraw(800)  # insufficient balance warning
+
+# Final balances
+acc1.show_balance()
+acc2.show_balance()
