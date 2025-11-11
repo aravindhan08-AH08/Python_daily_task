@@ -47,3 +47,21 @@ login_system(users, "david", "anything")    # Output: User Not Found
 # inventory = {"apple": 10, "banana": 5, "mango": 8}
 # If input is "apple 4", total becomes 14.
 #  If input is "grape 6", add it as a new product.
+
+# Program: Product Inventory Manager
+
+# Existing inventory
+inventory = {"apple": 10, "banana": 5, "mango": 8}
+
+# Take user input
+item, qty = input("Enter product name and quantity: ").split()
+qty = int(qty)
+
+# Check if item exists
+if item in inventory:
+    inventory[item] += qty   # Update quantity
+else:
+    inventory[item] = qty    # Add new product
+
+# Print updated inventory
+print("Updated Inventory:", inventory)
