@@ -8,14 +8,14 @@
 # K = 5
 
 nums = [10, 20, 30, 40, 50]
-K = 2
+k = 2
 
 #First vanthu check panrom ethu (invalid input) ah ella ya nu check panni next array test aagum you can check (Debug)
-if K > len(nums) or K < 0:
-    print("Invalid Input")
-else:
-    result = nums[:-K] if K != 0 else nums
-    print(result)
+# if k > len(nums) or k < 0:
+#     print("Invalid Input")
+# else:
+#     result = nums[:-k] if k == 0 else nums
+#     print(result)
 # Output: Invalid Input
 
 # 2. Given two lists, calculate the total count of odd numbers in each list. Print the list that contains the highest count of odd numbers.
@@ -79,3 +79,16 @@ else:
 
 # print(result)
 # Output: []
+
+
+
+date = input("Enter DD/MM/Year: ")
+
+parts = date.split("/")
+
+month = int(parts[1])
+
+if 1 <= month <= 12:
+    print("Yes")
+else:
+    print("N0")
