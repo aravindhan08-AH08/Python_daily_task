@@ -49,3 +49,18 @@ print(
 )
 
 # Another think is u Try More Test Case and u call it me tell i'm walkthrough
+
+
+def check_string(s):
+    if len(s) == 0:
+        return False
+    if len(s) == 1:
+        return True
+    return s[0] == s[-1]
+
+
+# Test cases
+print(check_string("abc"))   # True
+print(check_string("abba"))  # False
+print(check_string(""))      # False
+print(check_string("v"))     # True
