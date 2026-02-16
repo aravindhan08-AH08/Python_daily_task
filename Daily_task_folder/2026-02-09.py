@@ -43,3 +43,22 @@ finding_vowel("abcideouf",["d","f"])
 finding_vowel("aeibcfou",["b","c"])
 
 # Some error this code so anyone fix reach out to me.
+
+def remove_consecutive(nums):
+    if len(nums) == 0:
+        return 'invalid input'
+    else:
+        left = 0
+        right = 1
+
+        while right < len(nums):
+            if nums[left] != nums[right]:
+                left +=1
+                nums[left] = nums[right]
+            right +=1
+        result = []
+        for i in range(0, left+1,+1):
+            result.append(nums[i])
+        print(result)
+
+remove_consecutive([1,1,2,2,2,3,1,1])
