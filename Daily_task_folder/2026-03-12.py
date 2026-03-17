@@ -19,7 +19,6 @@ def matrix_group(mat):
 print(matrix_group([ [10,20,30],[40,60,70], [80,90,100]]))
 
 # Question 2
-# Question
 def right_max(arr):
     if len(arr) == 0:
         return "Invalid Input"
